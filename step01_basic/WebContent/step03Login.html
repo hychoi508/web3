@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- 1line은 html5 tag까지 개발 가능한 선언 -->
+
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	
+	<body>
+		로그인<br>
+		<form action="loginCheck" method ="post">
+		id<input type="text" name="id"><br>
+		pw<input type="password" name="pw"><br>
+		<input type="submit" value="login">
+	</form>
+	
+	<br><br><br>
+	<!-- client가 데이터를 입력해서 서버에 전송할 수 있는 UI
+		: form tag
+		 1. form를 선택하는 방법은, 작성후 컨트롤 스페이스바 누르면 고를 수 있음. 
+		 	: 속성은, 요청 받은 서버 프로그램 이름(sevlet or html or jsp)이 들어갈 수 있습니다.
+		 	
+		 	
+		 step 01 : tag 학습
+	 -->
+	<form action="?">
+		<input type="date"><br>
+		<input type="text" placeholder="test"><br>
+		<input type="password"><br>
+		<input type="number" max="10" min="0" value="0"><br>
+		<input type="email"><br>
+		
+		<input type="submit" value="로그인"><br>
+		<input type="reset" value="취소"><br>
+		<input type="button" value="버튼"> <br>
+		<button>test</button>
+		</form>
+	
+
+	</body>
+</html>
