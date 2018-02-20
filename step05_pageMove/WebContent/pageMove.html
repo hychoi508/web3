@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  http://ip:port/step05_pageMove/pageMove.html -->
+	<h3>[1]링크로 page 이동</h3>
+	1.<a href="one">이동</a>
+		<!-- http://localhost/step05_pageMove/one --><br>
+	
+	
+	
+	
+	2-1.<a href="one?name=bdh">web query string 전송하면서 이동[one->two는 forward로 이동]</a><br>
+		<!-- http://localhost/step05_pageMove/one -->
+	<br><hr><br>
+	
+	2-2.<a href="three?msg=data">web query string 전송하면서 이동[three->four는 redirect로 이동]</a><br>
+		<!-- http://localhost/step05_pageMove/o~~~~~~~ ~-->
+	<br><hr><br>
+	
+	<h3>[2]단순 button으로 page 이동</h3>
+	<button onclick="location.href='one'">3. 단순이동</button>
+	 	<!-- http://localhost/step05_pageMove/one -->
+	<button onclick="location.href='one?name=master'">4. web query string 전송하면서 이동</button>
+		<!-- http://localhost/step05_pageMove/one?name=master -->
+	<br><hr><br>
+	
+	<h3>[3]horm tag의 submit input으로 page 이동</h3>
+	
+	
+	
+	
+	
+	5. 단순 page이동만 하는 form tag<br>
+	<form action="one">
+		<input type="submit" value="요청">
+	</form>
+	<br>
+	<br><hr><br>
+	
+	
+	
+	
+	
+	6. action 속성에 web query string 값 반영하면서, page이동만 하는 form tag<br>
+	<form action="one?name=tester" method="post">
+		<input type="submit" value="요청">
+			<!-- * get방식인 경우
+					http://localhost/step05_pageMove/one? 
+					데이터 유실이 있음.
+					
+					* post 방식인 경우
+					http://localhost/step05_pageMove/one?name=tester
+					데이터 유실이 없음.
+					-->
+	</form>
+	<br>
+	<br><hr><br>
+	
+	7. hidden tag로 web query string 값 반영하면서, page이동만 하는 form tag<br>
+	<form action="one">
+		<input type="hidden" name="name" value="hiddenname">
+		<input type="submit" value="요청">
+			<!-- http://localhost/step05_pageMove/one?name=hiddenname -->
+	</form>
+	<br>
+	<br><hr><br>
+	
+</body>
+</html>

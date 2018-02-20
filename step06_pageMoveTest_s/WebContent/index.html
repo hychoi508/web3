@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index.html</title>
+</head>
+<body>
+
+	<h2>web page 이동 개발 방식</h2>
+	<a href="https://www.w3schools.com/tags/tag_dd.asp">dd tag 소개 url</a>
+	
+	<br><hr color="blue"><br>
+	
+	1. html tag중 링크 tag를 이용해서 daum 사이트로 이동될 수 있도록 완성하기 : 링크는 무조건 get<br>
+	<a href='https://www.daum.net'>다음 사이트로 이동</a>
+	
+	<br><hr color="blue"><br>
+	
+	
+	2. html button tag를 click해서 daum 사이트로 이동 : get방식<br>
+	<button onclick="location.href='http://www.daum.net'">다음 사이트로 이동</button>
+	
+	<br><hr color="blue"><br>
+	
+	<dl>
+		<dt>3. servlet api로  forword[디스페처] 방식으로 화면 이동하기</dt>
+		<dd>3-1. 실행되는 file 순서 : index.html -> Page1Servlet -> Page2Servlet</dd><br>
+		<dd>3-2. file간 이동 방식 : index.html: 링크 ->  Page1Servlet : forword ->  Page2Servlet </dd><br>
+		<dd>3-3. client 브라우저에 출력하는 로직은 Page1Servlet에서 개발하지 않음</dd>
+		<dd>3-4. Page1Servlet 에선 요청 객체에 name이라는 key로 개인 이름 저장해서 Page2Servlet에서 출력하기</dd>
+		<dd>3-5. <a href="page1">클릭하기 :  Page1Servlet 호출하기 </a></dd>
+	</dl>
+	<br><hr color="blue"><br>
+	
+	
+	<dl>
+		<dt>4. servlet api로   redirect 방식으로 화면 이동하기</dt>
+		<dd>4-1. 실행되는 file 순서 : index.html -> Page3Servlet -> Page4Servlet</dd><br>
+		<dd>4-2. file간 이동 방식 : index.html: form tag ->  Page3Servlet : redirect ->  Page4Servlet </dd><br>
+		<dd>4-3. client 브라우저에 출력하는 로직은 Page3Servlet에서 개발하지 않음</dd>
+		<dd>
+			<form action="page3" method="post">
+				<input type="submit" value="4-4. form tag">
+			</form>
+		</dd>
+	
+</body>
+</html>

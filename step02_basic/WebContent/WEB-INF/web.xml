@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>step02_basic</display-name>
+  
+ 
+  <welcome-file-list>
+    <welcome-file>step01Data.html</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+    <display-name>DataTotal</display-name>
+    <servlet-name>DataTotal</servlet-name>
+    <servlet-class>step01.DataTotal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DataTotal</servlet-name>
+    <url-pattern>/total</url-pattern>
+  </servlet-mapping>
+</web-app>
